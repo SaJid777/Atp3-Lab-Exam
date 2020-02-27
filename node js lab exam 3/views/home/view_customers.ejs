@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Customer List</title>
+</head>
+<body>
+	<div>
+			<h2>Customer List</h2> 		
+	</div>
+
+	<a href="/home">Back</a>|
+	<a href="/logout">Logout</a><br>
+
+	<table border="1">
+		<tr>
+			<td>ID</td>
+			<td>USERNAME</td>
+			<td>PASSWORD</td>
+			<td>TYPE</td>
+			<td>ACTION</td>
+		</tr>
+	<% for(var i=0; i < customerlist.length; i++){ %>
+		<tr>
+			<td><%= customerlist[i].id %></td>
+			<td><%= customerlist[i].username %></td>
+			<td><%= customerlist[i].password %></td>
+			<td><%= customerlist[i].type %></td>
+			<td>
+				<a href="/home/delete_cus/<%= customerlist[i].id %>">DELETE</a> 
+			</td>
+		</tr>
+	<%  } %>
+	</table>
+
+</body>
+</html>

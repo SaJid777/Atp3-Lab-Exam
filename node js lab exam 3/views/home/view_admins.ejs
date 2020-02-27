@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin List</title>
+</head>
+<body>
+	<div>
+			<h2>Admin List</h2> 		
+	</div>
+
+	<a href="/home">Back</a>|
+	<a href="/logout">Logout</a><br>
+
+	<table border="1">
+		<tr>
+			<td>ID</td>
+			<td>USERNAME</td>
+			<td>PASSWORD</td>
+			<td>TYPE</td>
+			<td>ACTION</td>
+		</tr>
+	<% for(var i=0; i < adminlist.length; i++){ %>
+		<tr>
+			<td><%= adminlist[i].id %></td>
+			<td><%= adminlist[i].username %></td>
+			<td><%= adminlist[i].password %></td>
+			<td><%= adminlist[i].type %></td>
+			<td>
+				<a href="/home/delete_admin/<%= adminlist[i].id %>">DELETE</a> 
+			</td>
+		</tr>
+	<%  } %>
+	</table>
+
+</body>
+</html>

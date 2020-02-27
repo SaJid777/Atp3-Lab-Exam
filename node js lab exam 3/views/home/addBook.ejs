@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Books</title>
+</head>
+<body>
+	<div>
+			<h2>Add Books</h2> 		
+	</div>
+
+	<a href="/home">Back</a> |
+	<a href="/logout">Logout</a><br>
+	
+	<form method="post">
+		<table>
+			<tr>
+				<td>ID: </td>
+				<td><input type="text" readonly name="id" ></td>
+			</tr>
+			<tr>
+				<td>Book Name: </td>
+				<td><input type="text" name="bookname" ></td>
+			</tr>
+			<tr>
+				<td>Price: </td>
+				<td><input type="text" name="price" ></td>
+			</tr>
+			<tr>
+				<td>Type: </td>
+				<td><select name="type" id="Type" style="width: 100%;">
+ 					<option selected hidden disabled >Select Category</option>
+  					<option value="Novel">Novel</option>
+  					<option value="Literature">Literature</option>
+  					<option value="Sci-fi">Sci-fi</option>
+  					<option value="Others">Others</option>
+					</select></td>
+			</tr>
+			<tr>
+				<td>Author Name: </td>
+				<td><input type="text" name="author" ></td>
+			</tr>
+			<tr>
+				<td>Description: </td>
+				<td><input type="text" name="description" ></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<input type="submit" name="" value="Add"> 
+				</td>
+			</tr>
+		</table>
+	</form>
+
+
+</body>
+</html>

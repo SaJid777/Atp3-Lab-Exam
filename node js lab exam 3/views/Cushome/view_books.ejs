@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Book List</title>
+</head>
+<body>
+	<div>
+			<h2>Book List</h2> 		
+	</div>
+
+	<a href="/Cushome">Back</a>|
+	<a href="/logout">Logout</a><br>
+
+	<table border="1">
+		<tr>
+			<td>BOOK ID</td>
+			<td>BOOK NAME</td>
+			<td>PRICE</td>
+			<td>TYPE</td>
+			<td>AUTHOR</td>
+			<td>ACTION</td>
+		</tr>
+	<% for(var i=0; i < booklist.length; i++){ %>
+		<tr>
+			<td><%= booklist[i].id %></td>
+			<td><%= booklist[i].bookname %></td>
+			<td><%= booklist[i].price %></td>
+			<td><%= booklist[i].type %></td>
+			<td><%= booklist[i].author %></td>
+			<td>
+				<a href="/Cushome/book_details/<%= booklist[i].id %>">Details</a> |
+				<a href="/Cushome/order_book/<%= booklist[i].id %>">Add to cart</a>
+			</td>
+		</tr>
+	<%  } %>
+	</table>
+
+</body>
+</html>

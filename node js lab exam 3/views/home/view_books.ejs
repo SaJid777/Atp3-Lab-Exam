@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Book List</title>
+</head>
+<body>
+	<div>
+			<h2>Book List</h2> 		
+	</div>
+
+	<a href="/home">Back</a>|
+	<a href="/logout">Logout</a><br>
+
+	<table border="1">
+		<tr>
+			<td>BOOK ID</td>
+			<td>BOOK NAME</td>
+			<td>PRICE</td>
+			<td>TYPE</td>
+			<td>AUTHOR</td>
+			<td>DESCRIPTION</td>
+			<td>ACTION</td>
+		</tr>
+	<% for(var i=0; i < booklist.length; i++){ %>
+		<tr>
+			<td><%= booklist[i].id %></td>
+			<td><%= booklist[i].bookname %></td>
+			<td><%= booklist[i].price %></td>
+			<td><%= booklist[i].type %></td>
+			<td><%= booklist[i].author %></td>
+			<td><%= booklist[i].description %></td>
+			<td>
+				<a href="/home/delete_book/<%= booklist[i].id %>">DELETE</a> 
+			</td>
+		</tr>
+	<%  } %>
+	</table>
+
+</body>
+</html>

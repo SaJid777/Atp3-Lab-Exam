@@ -1,0 +1,46 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<title>BOOK DETAILS</title>
+</head>
+<body>
+	<div>
+			<h2>BOOK DETAILS</h2> 		
+	</div>
+
+	<a href="/Cushome/view_books">Back</a> |
+	<a href="/logout">Logout</a><br>
+	
+	<form method="post">
+		<table>
+			<tr>
+				<td>Book ID: </td>
+				<td><input type="text" readonly name="id" value="<%= book.id %>"></td>
+			</tr>
+			<tr>
+				<td>Book Name: </td>
+				<td><input type="text" name="bookname" value="<%= book.bookname %>"></td>
+			</tr>
+			<tr>
+				<td>Price: </td>
+				<td><input type="text" name="price" value="<%= book.price %>"></td>
+			</tr>
+			<tr>
+				<td>Type: </td>
+				<td><input type="text" name="type" value="<%= book.type %>"></td>
+			</tr>
+			<tr>
+				<td>Author Name: </td>
+				<td><input type="text" name="author" value="<%= book.author %>"></td>
+			</tr>
+			<tr>
+				<td>Description: </td>
+				<td><input type="text" name="description" value="<%= book.description %>"></td>
+			</tr>
+			
+		</table>
+	</form>
+
+
+</body>
+</html>
